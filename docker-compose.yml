@@ -1,0 +1,11 @@
+services:
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: sql_server_container
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=Pr@ktyka123
+    ports:
+      - "1433:1433"
+    restart: unless-stopped
+    mem_limit: 4g
